@@ -1,0 +1,68 @@
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3350;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 60px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Sections */
+
+/* Main */
+.wrapper {
+  position: relative;
+  height: 450px;
+}
+
+/* Note, for slide effects need to use position relative/absolute to keep locked inside wrapper container and prevent clitches and interference with divs below. Based on this fiddle: http://jsfiddle.net/2vLjU/1/ */
+#Grid {
+  text-align: center; /* If not display:inline-block, this centers the Grid */
+  position: absolute;
+  left: 0;
+  width: 100%;
+  transition: width 600ms ease-in-out;
+}
+
+#Grid.slideLeft {
+  width: 50%;
+  transition: width 400ms ease-in-out;
+}
+
+/* Slide in and Slide out classes for experiment form section */
+#FormArea {
+  position: absolute;
+  width: 50%;
+  right: -50%;
+  transition: all 600ms ease-in-out;
+}
+#FormArea.slideIn {
+  right: 0vw;
+  transition: all 600ms ease-in-out;
+}
+
+.Holder {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 5px;
+  background-color: rgba(70, 168, 69);
+}
+
+.Holder:hover {
+  cursor: pointer;
+}
+
+.Holder div {
+  margin-top: 5px;
+}
+
+.HolderRow {
+  margin: 0 auto;
+}
